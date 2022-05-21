@@ -31,20 +31,25 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  iniciarSesion(resultado: any) {
+  iniciarSesion(resultado: any){
     this.loading = false;
-    if (resultado) {
-      localStorage.setItem("usuario", JSON.stringify(resultado));
-
-      if (resultado.idRol == 1) {
-        location.href = "/home";
-      } else {
-        location.href = "/home-user";
-      }
-    } else {
-      this.errorInicio = true;
-    }
+    location.href = "home";
   }
+
+  // iniciarSesion(resultado: any) {
+  //   this.loading = false;
+  //   if (resultado) {
+  //     localStorage.setItem("usuario", JSON.stringify(resultado));
+
+  //     if (resultado.idRol == 1) {
+  //       location.href = "/home";
+  //     } else {
+  //       location.href = "/home-user";
+  //     }
+  //   } else {
+  //     this.errorInicio = true;
+  //   }
+  // }
 
   loginService() {
     var httpOptions = {
