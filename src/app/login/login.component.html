@@ -1,0 +1,77 @@
+<div class="container">
+  <div class="row">
+    <div class="col-md-12" align="center">
+      <br>
+      <br>
+      <h1>Bienvenid@</h1>
+    </div>
+    <div class="col-md-12">
+      <hr color="blue">
+      <br>
+    </div>
+  </div>
+  <div class="row" *ngIf="loading">
+    <div class="col-md-12">
+      <div class="spinner-border text-info float-right" role="status">
+        <span class="sr-only">Loading...</span>
+      </div>
+    </div>
+    <br>
+    <br>
+  </div>
+</div>
+
+<section>
+  <div class="containter">
+    <div class="row">
+
+      <div class="col-md-3" align="center">
+      </div>
+
+      <div class="col-md-6" align="center">
+        <div class="col-md-9">
+          <h4>Inicia sesión para acceder a tu cuenta</h4>
+          <hr>
+          <form (ngSubmit)="login()" id="login">
+
+            <div class="row">
+              <div class="col-md-12">
+                <input type="text" [(ngModel)]="usuario.nombreUsuario" [ngModelOptions]="{standalone: true}"
+                  placeholder="Nombre" class="form-control" required>
+              </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+              <div class="col-md-12">
+                <input type="password" [(ngModel)]="usuario.password" [ngModelOptions]="{standalone: true}"
+                  placeholder="Password" class="form-control" required>
+              </div>
+            </div>
+
+            <br>
+
+            <div class="row">
+              <div class="col-md-12">
+                <input class="btn btn-info float-left" type="submit" value="Ingresar">
+              </div>
+            </div>
+
+          </form>
+
+          <div class="row" *ngIf="errorInicio">
+            <div class="col-md-12">
+              <label class="float-center" style="color: red;">Usuario o password incorrecto</label>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="col-md-3" align="center">
+      </div>
+
+    </div>
+  </div>
+</section>
