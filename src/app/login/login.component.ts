@@ -17,6 +17,10 @@ export class LoginComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
 
+  homeUser(){
+    location.href = "/home-user";
+  }
+
   ngOnInit(): void {
   }
 
@@ -33,7 +37,7 @@ export class LoginComponent implements OnInit {
 
   login(){
     this.loading = false;
-    location.href = "/home-user";
+    location.href = "/home";
   }
 
   // iniciarSesion(resultado: any) {
