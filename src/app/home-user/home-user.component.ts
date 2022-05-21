@@ -16,15 +16,19 @@ export class HomeUserComponent implements OnInit {
 
   constructor(private http: HttpClient) { }
 
+  // ngOnInit(): void {
+  //   this.usuario = JSON.parse(localStorage.getItem("usuario"));
+  //   if (!this.usuario) {
+  //     location.href = "/";
+  //   } else {
+  //     if (this.usuario.idRol != 2) {
+  //       location.href = "/";
+  //     }
+  //   }
+  // }
+
   ngOnInit(): void {
-    this.usuario = JSON.parse(localStorage.getItem("usuario"));
-    if (!this.usuario) {
-      location.href = "/";
-    } else {
-      if (this.usuario.idRol != 2) {
-        location.href = "/";
-      }
-    }
+
   }
 
   logout() {

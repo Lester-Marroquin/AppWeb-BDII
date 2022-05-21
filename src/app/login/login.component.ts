@@ -20,20 +20,20 @@ export class LoginComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  login() {
-    let formulario: any = document.getElementById("login");
-    let formularioValido: boolean = formulario.reportValidity();
-    if (formularioValido) {
-      this.loading = true;
-      this.loginService().subscribe(
-        data => this.iniciarSesion(data)
-      )
-    }
-  }
+  // login() {
+  //   let formulario: any = document.getElementById("login");
+  //   let formularioValido: boolean = formulario.reportValidity();
+  //   if (formularioValido) {
+  //     this.loading = true;
+  //     this.loginService().subscribe(
+  //       data => this.iniciarSesion(data)
+  //     )
+  //   }
+  // }
 
-  iniciarSesion(resultado: any){
+  login(){
     this.loading = false;
-    location.href = "home";
+    location.href = "/home-user";
   }
 
   // iniciarSesion(resultado: any) {
