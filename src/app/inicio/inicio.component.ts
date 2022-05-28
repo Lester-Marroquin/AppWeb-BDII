@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@Angular/common/http';
+import { DashboardService } from '../services/dashboard_services/dashboard.service';
 
 @Component({
   selector: 'app-inicio',
@@ -8,7 +9,14 @@ import { HttpClient, HttpHeaders } from '@Angular/common/http';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private http: HttpClient) { }
+  constructor(private dashboardService: DashboardService) {}
+
+  objeto: any = {};
+  host: String = 'localhost';
+  response: any = {};
+  data: any = [];
+
+  static selectableTextArea: NodeListOf<Element>;
 
   ngOnInit(): void {
   }
@@ -25,8 +33,22 @@ export class LoginComponent implements OnInit {
     )).value = '');
   }
 
-  ejecutarScript(){
-    
+  llamarMetodo() {
+    this.objeto.host = this.host;
+    this.objeto.user = 'root';
+    this.objeto.password = '1234';
+    this.objeto.database = 'projectbd2';
+
+    this.dashboardService
+      .getTables(this.objeto)
+      .subscribe((res: any) => this.finalizarGuardar(res));
+
+      // this.dashboardService
+      // .cualquiercosa(this.objeto)
+      // .subscribe((res: any) => this.finalizarGuardar(res));
   }
+
+
+
 
 }
