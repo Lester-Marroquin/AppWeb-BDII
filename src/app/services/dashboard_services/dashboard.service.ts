@@ -28,7 +28,7 @@ export class DashboardService {
 
   private manejarError(e: any) {
     console.log(e);
-    return throwError('Ocurrio un error');
+    return throwError('Ha ocurrido un error');
   }
 
   getTables(data: any) {
