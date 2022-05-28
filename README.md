@@ -1,3 +1,8 @@
+# Ejecutar
+npm i
+npm i rxjs
+
+
 # Proyecto Base de Datos II
 Integrantes:
 Lester Josué Marroquín Morales      3190-19-1607
