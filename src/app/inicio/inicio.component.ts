@@ -16,6 +16,8 @@ export class LoginComponent implements OnInit {
   response: any = {};
   data: any = [];
 
+  //Metodos
+
   static selectableTextArea: NodeListOf<Element>;
 
   ngOnInit(): void {
