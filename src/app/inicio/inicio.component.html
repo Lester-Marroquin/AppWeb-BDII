@@ -30,26 +30,33 @@
 
       <div class="col-md-5" align="rigth">
         <h5>Ingreso de sentencias</h5>
-          <textarea  id="ingresoScript" name="sentencias"  cols="100" rows="8" ></textarea>
-          <hr>
-          <button type="button" class="btn btn-success mr-3" (click)="llamarMetodo()">Ejecutar script</button>
-          
-          <button type="button" class="btn btn-warning" (click)="limpiarScript()">Limpiar</button>
-          <hr color="blue">
+        <textarea id="ingresoScript" name="sentencias" cols="100" rows="15"></textarea>
+        <hr>
+        <button type="button" class="btn btn-success mr-3" (click)="mostrarResultado()">Ejecutar script</button>
+
+        <button type="button" class="btn btn-warning" (click)="limpiarScript()">Limpiar</button>
+        <hr color="blue">
       </div>
 
       <div class="col-md-5" align="rigth">
-        <h5>Resultado de sentencias</h5>
-          <textarea  id="resultadosScript" name="sentencias"  cols="100" rows="15" ></textarea>
+
+
+        <div id="resultadosScript">
+
+          <h5>Resultado de sentencias</h5>
           <hr>
-          <button type="button" class="btn btn-warning" (click)="limpiarResultado()">Limpiar</button>
-          <hr color="blue">
+
+
+
+        </div>
+
+        <button type="button" class="btn btn-warning" (click)="limpiarResultado()">Limpiar</button>
+        <hr color="blue">
       </div>
-      
+
       <div class="col-md-1" align="center">
       </div>
 
     </div>
   </div>
 </section>
-

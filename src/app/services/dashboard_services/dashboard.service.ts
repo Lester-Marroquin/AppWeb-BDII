@@ -28,6 +28,7 @@ export class DashboardService {
 
   private manejarError(e: any) {
     console.log(e);
+    alert("Error en la ejecución. Mensaje: " + e.status);
     return throwError('Ocurrio un error');
   }
 
@@ -38,5 +39,9 @@ export class DashboardService {
   cualquiercosa(data: any) {
     return this.consumirPost('/tables', data);
   }
+
+  dScript(data: any){
+    return this.consumirPost('/querys',data);
+  }  
 
 }

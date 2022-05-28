@@ -29,16 +29,4 @@ export class ConnectionService {
     return throwError('Ha ocurrido un error');
   }
 
-  getConnections() {
-    return this.consumirGet('/connections');
-  }
-
-  login(data: any) {
-    return this.consumirPost('/login', data);
-  }
-
-  guardarConexion(data: any) {
-    return this.consumirPost('/connections', data);
-  }
-
 }
