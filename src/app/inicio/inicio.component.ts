@@ -43,11 +43,15 @@ export class LoginComponent implements OnInit {
       .getTables(this.objeto)
       .subscribe((res: any) => this.finalizarGuardar(res));
 
-      // this.dashboardService
-      // .cualquiercosa(this.objeto)
-      // .subscribe((res: any) => this.finalizarGuardar(res));
   }
 
+  finalizarGuardar(respuesta: any) {
+    this.response = respuesta;
+
+    this.data = this.response.data;
+
+    console.log(this.data[1].table);
+  }
 
 
 
